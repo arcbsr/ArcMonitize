@@ -11,6 +11,7 @@
     <string name="fb_ads_native_ban_id">test</string>
     <string name="fb_ads_interstitial_id">test</string>
     <string name="fb_ads_banner_id">test</string>
+    <string name="startappid">test</string>
     <string-array name="addTestDevices">
         <item>6F3ADC1434991C6FF58886FD0E41BF23</item><!--s9+ -->
         <item>5875F26ED157C8B6E37539F53F83E41C</item><!--s7 -->

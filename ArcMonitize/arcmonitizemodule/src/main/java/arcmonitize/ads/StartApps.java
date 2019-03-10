@@ -2,6 +2,7 @@ package arcmonitize.ads;
 
 import android.app.Activity;
 
+import com.arcadio.arcmonitizemodule.R;
 import com.startapp.android.publish.adsCommon.Ad;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 import com.startapp.android.publish.adsCommon.StartAppSDK;
@@ -17,7 +18,7 @@ public class StartApps {
     }
 
     public void loadStartAds() {
-        StartAppSDK.init(mActivity, "202642197", true);
+        StartAppSDK.init(mActivity, mActivity.getString(R.string.startappid), true);
         startAppAd = new StartAppAd(mActivity);
     }
 
