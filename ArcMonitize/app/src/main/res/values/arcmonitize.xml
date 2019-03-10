@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="admob_app_id">ca-app-pub-6730598713016569~9578352212</string>
+    <string name="admob_reward_id">ca-app-pub-6730598713016569/1717858275</string>
+    <string name="admob_banner_id">ca-app-pub-6730598713016569/6910475208</string>
+    <string name="admob_fullscreen_id">ca-app-pub-6730598713016569/1909429962</string>
+
+    <string name="fb_ads_native_id">295585844431539_295585944431529</string>
+    <string name="fb_ads_native_ban_id">295585844431539_295587167764740</string>
+    <string name="fb_ads_interstitial_id">593155627789781_593156187789725</string>
+    <string name="fb_ads_banner_id">593155627789781_593155804456430</string>
+    <string-array name="addTestDevices">
+        <item>6F3ADC1434991C6FF58886FD0E41BF23</item><!--s9+ -->
+        <item>5875F26ED157C8B6E37539F53F83E41C</item><!--s7 -->
+        <item>6878B1B4351211CAB8E12AB897F68775</item><!--s4 -->
+        <item>FC65A60E1C28A03E140607255E94D5D2</item><!--symphony v75 -->
+        <item>34E4877A216AB54778934ED4CD886CA6</item><!--symphony 4.4 -->
+        <item>A728ABF43E202B4E8700D0EEB113821E</item><!--note5 -->
+        <item>F6788F2849D56E8149F1F2291658DF3A</item><!--S5 -->
+        <item>B73A771B491294BDACEDC82552B80CA0</item><!--techno -->
+    </string-array>
+    <string name="gp_inapp_li">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdLWmuiu0N27BBKpywWsOucsVYukJ4NCEKoLcNvlmUL/AJ/M8RVyVAKsMO9KJ8HGCkF2tPEE5INFUKfBy13MDbNY6LXHq1gTUS0p2bAE7S5YC9ZxKWF0nLc1HSmoQ0cuJnJichrDDz2/n04jvDlK0PAOtIjpaJR2w8EM0wqh/SF7Jf9BRDub9FMHLbe6zR0FD61s3fpWx23OdM/pmj/KDniYOdF95erLaiHO4wHiSl8DdsFTKTPSktdT6dzmaoX1iWY21G0/tYMb6CXDQ4awlZIocPxawjJfD0tlKOg+GAa4PVT93Bqlk5WbYS6ugn22NvC4ZQrzMT/be7CrxoxhaQIDAQAB</string>
+
+    <string name="gp_inapp_marchent">07531761968606909318</string>
+</resources>
