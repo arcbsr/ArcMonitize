@@ -99,4 +99,11 @@ public class InAppBillingBaseActivity extends AppCompatActivity implements Billi
         intent.putExtra(KEY_PRODUCT_ID, pid);
         context.startActivityForResult(intent, requestcode);
     }
+
+    public static boolean isPurchased(Activity context, String pid) {
+        if (InAppBillingPref.getBooleanSetting(context, pid, false)) {
+            return true;
+        }
+        return false;
+    }
 }
