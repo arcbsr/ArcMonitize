@@ -12,11 +12,14 @@ import arcmonitize.VLog;
 
 public class ArcInAppBilling {
     private BillingProcessor bp;
-    public static final int INAPP_ERROR_UNKNOWN = -1;
-    public static final int INAPP_ERROR_SERVICE = -2;
-    public static final int INAPP_ERROR_LOADING = -3;
-    public static final int INAPP_PROCESSING = 0;
-    public static final int INAPP_ALREADY_PURCHASED = 1;
+    public static final int INAPP_ERROR_UNKNOWN = -1021;
+    public static final int INAPP_ERROR_SERVICE = -1022;
+    public static final int INAPP_ERROR_LOADING = -1023;
+    public static final int INAPP_ERROR_PID = -1024;
+    public static final int INAPP_ERROR_PURCHASE = -1025;
+    public static final int INAPP_PROCESSING = 1020;
+    public static final int INAPP_ALREADY_PURCHASED = 1021;
+    public static final int INAPP_SUCCESS_PURCHASED = 1022;
     private ProgressDialog dialog;
 
     public BillingProcessor getBillingProcessor() {
@@ -46,7 +49,8 @@ public class ArcInAppBilling {
         return bp.loadOwnedPurchasesFromGoogle();
     }
 
-    public String getbpCodeStatus(final int bpCode) {
+    public static String getbpCodeStatus(final int bpCode) {
+        VLog.w("<<>>" + bpCode);
         switch (bpCode) {
             case INAPP_ALREADY_PURCHASED:
                 return "INAPP_ALREADY_PURCHASED";
@@ -58,6 +62,12 @@ public class ArcInAppBilling {
                 return "INAPP_ERROR_UNKNOWN";
             case INAPP_PROCESSING:
                 return "INAPP_PROCESSING";
+            case INAPP_ERROR_PURCHASE:
+                return "INAPP_ERROR_PURCHASE";
+            case INAPP_SUCCESS_PURCHASED:
+                return "INAPP_SUCCESS_PURCHASED";
+            case INAPP_ERROR_PID:
+                return "INAPP_ERROR_PID";
             default:
                 return "Unhandled";
         }
@@ -122,9 +132,6 @@ public class ArcInAppBilling {
     public void onBillingInitialized() {
         if (dialog.isShowing()) {
             dialog.dismiss();
-        }
-        if (bp != null && !isAvailableService()) {
-            return;
         }
     }
 
