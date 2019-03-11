@@ -25,3 +25,10 @@
     <string name="gp_inapp_li">test</string>
     <string name="gp_inapp_marchent">test</string>
 </resources>
+ //adb shell pm clear com.android.vending
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (!arcInAppBilling.getBillingProcessor().handleActivityResult(requestCode, resultCode, data)) {
+//            super.onActivityResult(requestCode, resultCode, data);
+//        }
+//    }
