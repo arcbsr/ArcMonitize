@@ -17,6 +17,15 @@ public class AdControllPanel {
     LinearLayout adViewLayout = null;
     private Activity mActivity = null;
     private AnalyticControllerPanel mAnalyticControllerPanel;
+
+    public int getAdsInterval() {
+        return adsInterval;
+    }
+
+    public void setAdsInterval(int adsInterval) {
+        this.adsInterval = adsInterval;
+    }
+
     private int adsInterval = Settings.ADS_INTERVAL;
     private Admob admob;
     private FBAds fbAds;
