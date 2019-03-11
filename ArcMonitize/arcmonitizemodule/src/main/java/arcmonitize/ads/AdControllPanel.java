@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.LinearLayout;
 
+import arcmonitize.ArcPrefs;
 import arcmonitize.Settings;
 import arcmonitize.VLog;
 import arcmonitize.analytic.AnalyticControllerPanel;
-import arcmonitize.inApp.InAppBillingPref;
 
 
 public class AdControllPanel {
@@ -17,6 +17,15 @@ public class AdControllPanel {
     LinearLayout adViewLayout = null;
     private Activity mActivity = null;
     private AnalyticControllerPanel mAnalyticControllerPanel;
+
+    public int getAdsInterval() {
+        return adsInterval;
+    }
+
+    public void setAdsInterval(int adsInterval) {
+        this.adsInterval = adsInterval;
+    }
+
     private int adsInterval = Settings.ADS_INTERVAL;
     private Admob admob;
     private FBAds fbAds;
@@ -25,7 +34,11 @@ public class AdControllPanel {
         return fbAds;
     }
 
-    public AdControllPanel(Activity activity, boolean isRemoved) {
+    public AdControllPanel(Activity activity) {
+        adControllPanel(activity, false);
+    }
+
+    private void adControllPanel(Activity activity, boolean isRemoved) {
         if (mActivity == null) {
             mActivity = activity;
         }
@@ -93,13 +106,13 @@ public class AdControllPanel {
             return false;
         }
         if (adsInterval > 0) {
-            int adsInterval2 = InAppBillingPref.getIntSetting(mActivity, "adsintervalarc", 0);
+            int adsInterval2 = ArcPrefs.getIntSetting(mActivity, "adsintervalarc", 0);
             VLog.w("adsInterval", adsInterval + "<<>>" + adsInterval2);
             if (adsInterval2 < adsInterval) {
-                InAppBillingPref.setSetting(mActivity, "adsintervalarc", adsInterval2 + 1);
+                ArcPrefs.setSetting(mActivity, "adsintervalarc", adsInterval2 + 1);
                 return false;
             } else {
-                InAppBillingPref.setSetting(mActivity, "adsintervalarc", 0);
+                ArcPrefs.setSetting(mActivity, "adsintervalarc", 0);
             }
         }
         //Log.w("adsInterval", "should show");

@@ -1,13 +1,11 @@
-package arcmonitize.inApp;
+package arcmonitize;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
-public class InAppBillingPref {
-
-    public static final String KEY_USER_LIST = "user_list";
+public class ArcPrefs {
 
 
     /**

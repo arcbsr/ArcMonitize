@@ -6,9 +6,7 @@ public class Settings {
 
     public static final boolean IS_ADS_ENABLE = true;
     private static String TEST_DEVICE_ID = "";
-    public static final int ADS_INTERVAL = 1;
-    public static final String KEY_INAPP_TEST = "android.test.purchased";
-    public static final String KEY_INAPP_CANCELED = "android.test.canceled";
+    public static final int ADS_INTERVAL = 3;
 
     public static String getTestDeviceId(Activity activity) {
         if (!TEST_DEVICE_ID.isEmpty()) {

@@ -2,7 +2,6 @@
     package="com.arcadio.arcmonitizemodule">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
@@ -10,11 +9,6 @@
         android:hardwareAccelerated="true"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true">
-
-        <activity
-            android:name="arcmonitize.inApp.InAppBillingBaseActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"></activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
