@@ -117,8 +117,10 @@ public class ArcInAppBilling {
 
     Activity context = null;
 
-    public ArcInAppBilling(@Nullable Activity context, BillingProcessor.IBillingHandler appBillingListener) {
+    public ArcInAppBilling(@Nullable Activity context) {
         this.context = context;
+    }
+    public void init(BillingProcessor.IBillingHandler appBillingListener){
         dialog = new ProgressDialog(context);
         dialog.setMessage("please wait...");
         dialog.show();
@@ -128,7 +130,6 @@ public class ArcInAppBilling {
                 context.getString(R.string.gp_inapp_marchent), appBillingListener);
         bp.initialize();
     }
-
     public void onBillingInitialized() {
         if (dialog.isShowing()) {
             dialog.dismiss();

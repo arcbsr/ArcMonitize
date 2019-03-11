@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 InAppBillingBaseActivity.startActivityForPurchase(MainActivity.this,
-                        1000, Settings.KEY_INAPP_TEST);
+                        1000, Settings.KEY_INAPP_TEST+"s");
 
             }
         });

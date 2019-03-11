@@ -24,11 +24,16 @@ public class InAppBillingBaseActivity extends AppCompatActivity implements Billi
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mProductId = getIntent().getStringExtra(KEY_PRODUCT_ID);
+        arcInAppBilling = new ArcInAppBilling(this);
         if (mProductId.length() == 0) {
             onFinishedActivity(RESULT_CANCELED, ArcInAppBilling.INAPP_ERROR_PID);
             return;
         }
-        arcInAppBilling = new ArcInAppBilling(this, this);
+        if (arcInAppBilling.isPurchased(mProductId)) {
+            onFinishedActivity(RESULT_CANCELED, ArcInAppBilling.INAPP_ALREADY_PURCHASED);
+            return;
+        }
+        arcInAppBilling.init(this);
     }
 
     //adb shell pm clear com.android.vending
