@@ -37,6 +37,9 @@ public class AdControllPanel {
     public AdControllPanel(Activity activity) {
         adControllPanel(activity, false);
     }
+    public AdControllPanel(Activity activity, boolean isRemoved) {
+        adControllPanel(activity, isRemoved);
+    }
 
     private void adControllPanel(Activity activity, boolean isRemoved) {
         if (mActivity == null) {
